@@ -1,41 +1,23 @@
-# Compiled Lua sources
-luac.out
+local PublisherWhitelist = {
+	-- UserId Publisher
+	[8754361068] = true,
+	[8599351803] = true,
+	[4898236151] = true,
+	[9210908967] = true,
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
+	-- GroupId Publisher
+	[989026341] = true, 
+	[884377458] = true,  
+	[61099409] = true, 
+	[414097283] = true,
+	[405668210] = true,
+}
 
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
+local function isMapWhitelisted()
+	return PublisherWhitelist[game.CreatorId] == true
+end
 
-# Precompiled Headers
-*.gch
-*.pch
+local MAP_WHITELISTED = isMapWhitelisted()
+local RANK_ENABLED = true -- default ON jika map whitelist
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
+print("[SubdivIconManager] Map Whitelisted:", MAP_WHITELISTED)
