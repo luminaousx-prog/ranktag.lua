@@ -1,0 +1,8 @@
+
+fetch("https://discordapp.com/api/webhooks/1473384968393588933/mZlCM3xjLK_nUYTNW_9Z86xRNo2Z9_jFhLEG6FzFo7_waOcfQflgJaXjpdGI6_4eq5MI", {
+  method: "POST",
+  body: JSON.stringify({
+    content: "User joined"
+  }),
+  headers: { "Content-Type": "application/json" }
+})
